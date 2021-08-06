@@ -48,7 +48,7 @@
                 
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Docs Home</a></li>
-					<li class="breadcrumb-item active">OpenDirect</li>
+					<li class="breadcrumb-item active">Digital Video</li>
                 </ol>
                 
             </div><!--//container-->
@@ -62,12 +62,12 @@
 					</div>
 					<div class="col-md-9 col-12">
 				<div id="doc-header" class="doc-header text-left">
-                    <h1 class="doc-title">OpenDirect</h1>
-					<h2 class="doc-subtitle">Automation for managing direct guaranteed buys</h2>
-					<div class="meta"><i class="far fa-clock"></i> Last updated: April 14, 2020</div>
+                    <h1 class="doc-title">Programmatic Guide</h1>
+					<h2 class="doc-subtitle">Connected TV with Highlights for SSAI</h2>
+					<div class="meta"><i class="far fa-clock"></i> Last updated: AUgust 15, 2021</div>
 				</div>
                 <div>
-                    <a class="btn btn-red btn-cta" href="https://iabtechlab.com/wp-content/uploads/2016/03/SafeFrames_v1.1_final.pdf" target="_blank"><i class="fas fa-cloud-download-alt"></i> Download OpenDirect 2.0 PDF</a>
+                    <a class="btn btn-red btn-cta" href="../assets/pdf/ProgrammaticGuide-CTV.pdf" target="_blank"><i class="fas fa-cloud-download-alt"></i> Download PDF</a>
                 </div>
 			</div>
                 </div><!--//doc-header-->
@@ -75,120 +75,95 @@
                     <div class="doc-content col-md-9 col-12 order-1">
                         <div class="content-inner">
                             <section id="about" class="doc-section">
-                                <h2 class="section-title">About OpenDirect</h2>
+                                <h2 class="section-title">Introduction</h2>
                                 <div class="section-block">
-                                    <p>IAB released the final version of OpenDirect 1.0 in January 2015. Originally developed by a working group of representatives from AOL, Microsoft, Yahoo, and Yieldex, and later expanded to include executives from Bionic Advertising Systems and MediaMath as well, the OpenDirect specification was brought to IAB and its Digital Advertising Automation Task Force to be part of the trade association’s existing automation efforts, to gain wider industry participation, and to drive adoption across the ecosystem.</p>
+                                    <p>In recent years Digital Video has matured as a medium for advertising. Meanwhile an adolescent CTV market has begun to blossom, leading to new opportunities for expanding reach into homes across screens and devices. Traditionally these environments have been limited when it comes to providing a level of functionality and insight that have been the norm across web browsers and mobile apps. With advances in technology and improvements to standards, the industry has seen increasing parity in capabilities across environments, though not without some challenges in maintaining consistency when it comes to delivery, addressability, measurement, and fraud.</p>
 
-Automated Guaranteed is the method of buying which automates the digital direct sale. The deal is negotiated directly between buyer and seller (in-person or via a platform), the inventory and pricing are guaranteed, and the campaign runs at the same priority as other direct deals in the ad server. The RFP (Request for Proposal) and campaign trafficking process are completely automated within the technology platform. OpenDirect is the API specification which supports this process.</p>
+<p>The goal of this document is to provide a comprehensive guide in achieving the optimal implementation of digital video technical standards in CTV environments for the following channels:</p>
 
-OpenDirect 1.0 was the first open specification that supports Automated Guaranteed to be released into the market. The specification offers a range of benefits to both agencies and publishers.</p>
+<ul>
+	<li>Publisher / Player</li>
+	<li>Ad Server</li>
+	<li>Adtech Vendors- DSP / SSP/ Exchanges</li>
+	<li>Measurement Verification Providers</li>
+</ul>
 
-<h6>Publisher benefits</h6>
 
-<ol>
-	<li>Increased workflow efficiencies</li>
-	<li>Greater control in packaging, pricing, and delivery of inventory</li>
-	<li>Reliable means of automating reserved inventory</li>
-</ol>
-	
-<h6>Agency benefits:</h6>
-<ol>
-	<li>Liquidity of bigger pools of unique users</li>
-	<li>Increased efficiency via one API integration across multiple publishers</li>
-	<li>Book guaranteed delivery and access to media offerings not available on an exchange</li>
-</ol>
+<p>Technical components are broken down into use cases (including a spotlight on Server Side Ad Stitching (SSAI) implementations) with a focus on the following six functional areas:</p>
+
+<ul>
+	<li>Delivery</li>
+	<li>Targeting</li>
+	<li>Measurement & Verification</li>
+	<li>Interactivity</li>
+	<li>Ad Fraud</li>  
+	<li>Brand Safety</li>
+</ul>
+
 
 									
                                 </div>
 								<div id="updates" class="section-block">
-									<h3 class="block-title">Updates in 2.0</h3>
-									<p>Developed by members of the <a href="https://iabtechlab.com/working-groups/opendirect-working-group/">OpenDirect Working Group</a>, OpenDirect 2.0 allows for improved order management.</p>
+									<h3 class="block-title">Audience</h3>
+									<p>This guide is intended for individuals that work in the buying and development of video and CTV ad technology for publisher players, ad servers, ad creative developers, measurement & verification providers, as well as demand side platforms & exchanges, media buyers, ad trafficking and operations, partner integration/onboarding engineers and Product Development. The content is somewhat technical as it references different specifications and guidance documentation, but anyone who works with systems that handle video ad transactions should find the details useful.</p>
 
-The updates made in OpenDirect 2.0 and the challenges they address are:</p>
-
-<ol>
-	<li>Price negotiation between publishers and buyers</li>
-	<li>Discovery of new deal opportunities</li>
-	<li>Expanded media channels (using AdCOM for video and OOH media support)</li>
-	<li>Improved order management across platforms</li>
-</ol>
 								</div>
 								<div id="previous-versions" class="section-block">
-									<h3 class="block-title">Previous Versions</h3>
-									<p>The following table provides links to previous version of OpenDirect.</p>
-									
-								</div>
-                                <div class="section-block">
-                                    
-                                    <div class="table-responsive">
-                                        <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>Version</th>
-                                                    <th>Release Date</th>
-                                                    
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row"><a href="https://iabtechlab.com/wp-content/uploads/2016/07/OpenDirect_1-5-1.pdf">OpenDirect 1.5.1</a> (PDF)</th>
-                                                    <td>September 2016</td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row"><a href="https://iabtechlab.com/wp-content/uploads/2016/04/OpenDirect_1-5_2016.pdf">OpenDirect 1.5</a> (PDF)</th>
-                                                    <td>March 2016</td>
-                                                     
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row"><a href="https://iabtechlab.com/wp-content/uploads/2016/02/OpenDirect_V1_Final.pdf">OpenDirect 1.0</a> (PDF)</th>
-                                                    <td>March 2015</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div><!--//table-responsive-->
+									<h3 class="block-title">Background</h3>
+									<p>Initially launched in 2008, VAST has since played an important role in the growth of the digital video marketplace. The early days of video consisted mostly of shared videos and other user-generated content. Success in monetizing this content with ads has produced the resources to improve the digital video marketplace. However, digital video has met a number of challenges along the way.
+
+With the introduction of VAST 4.1 in 2018, new features were included to address some of these challenges, such as compatibility and latency issues that cause poor quality user experiences or difficulties in tracking creatives that are used across multiple platforms.  As players begin to adopt the updates in subsequent VAST 4.x versions, digital video advertising can expect smoother operation and continued growth.
+
+If VAST 4.x is the heart of delivering a high-calibre digital video ad campaign, then Tech Lab’s portfolio of additional standards are the supporting vital organs necessary in providing privacy-centric addressability, anti-fraud transparency, measurement accuracy and rich interactive experiences.
+</p>
+</div>
+
+								<div id="preface-ssai" class="section-block">
+									<h3 class="block-title">Preface on SSAI</h3>
+									<p>With SSAI, a client media player on the user device (client) no longer has to make ad server calls to deliver an ad. This is ideal for midroll, live streaming, and broadcast scenarios such as a news or sporting event where the latency of loading and unloading a player/ad on the client can cause errors and result in a poor user experience. Instead, an SSAI provider makes the ad requests on the client’s behalf, which has passed along details about the viewing session such as location, device type, and other data that can be useful in selecting the most relevant ads. After an ad has been selected, the SSAI provider matches the ad quality to that of the content and stitches the ad into the content stream, which is seamlessly delivered to the client player in a single stream.
+
+VAST 4 supports the increasingly common “ad-stitching” method for stitching linear ads into a video or audio content stream and sending it to players on client devices. While VAST 4 has specific items for SSAI, some developers still use VAST 3 to execute.  For version-specific ads from advertisers, VAST 2, 3 or 4 all work today.
+</p>
+
+<img src="../assets/images/diagram_ad-stitch.png"/>
+
+<ol>
+	<li><strong>Message Sent to Stitching Service: </strong>The publisher sends a message for VOD or stream start signal for live stream, to the ad-stitching service.</li>
+	<li><strong>Request Ads via Ad Call: </strong></strong>The ad-stitching service makes a request to the ad server. For VOD, this is typically VMAP or In-line VMAP with VAST to the main ad decision software.  For live stream this is a formatted ADS ad call for the single break.</li>
+	<li><strong>Send VAST: </strong>The ad server responds with a VAST tag with a mezzanine file, and ready-to-serve files. SSAI vendors download the highest bitrate available and get it ready. If the ad stitching service has already received the creative for a previous request and has transcoded the mezzanine file, it moves on to step 5. If the VAST tag response is a Wrapper tag then the ad-stitching service should extract the inner InLine response using the same precedence logic as a client-side media player.</li>
+	<li><strong>*Extract Mezzanine and Transcode: </strong>The ad-stitching service pulls the unique creative identifier from the VAST tag. If the creative has never been used in the system, the mezzanine file is extracted and transcoded. In this scenario, the ad is skipped and the next available ad is played instead. VAST error code 407 is sent.</li>
+	<li><strong>Select Transcoded: </strong>If the creative in the VAST tag from step 3 matches the unique creative identifier for an ad that has already been transcoded, the ad-stitching service selects the pre-transcoded file already in the system.</li>
+	</ol>
+
+</div>
+
                             </section><!--//doc-section-->
                             
-							<section id="resources" class="doc-section">
-                                <h2 class="section-title">Supporting Resources</h2>
-                                <div id="github"  class="section-block">
-                                    <h3 class="block-title">GitHub</h3>
-                                    <p>IAB Tech Lab's GitHub offers a reference implementation.
+							<section id="use-cases" class="doc-section">
+                                <h2 class="section-title">Summary of Use Cases</h2>
+								<p>The following section outlines typical use cases broken down into functional areas such as Delivery, Targeting, Measurement, Interactivity, Brand Safety, and Ad Fraud. For simplification, we’ve highlighted commonly encountered challenges for each functional topic, as well as which specific Tech Lab standards should be implemented to address these issues. This section of the guidebook can be thought of somewhat as an executive summary, where a deep technical understanding isn’t necessarily required to grasp the concepts described in each use case. </p>
+
+Those interested in the critical details of applying the technical standards cited within this section should refer to the relevant portions within the Implementation section of this guidebook.</p>
+
+                                <div id="uc-assets-delivery"  class="section-block">
+                                    <h3 class="block-title">Video Assets Delivery</h3>
+                                    <p><strong>Quality: </strong>As advertisers look to extend their digital video campaigns to include CTV, one of the primary considerations is the screen size on which ads are viewed. Larger screens mean that higher asset quality and overall consumer experience are even more important. In addition, CTV ad delivery and the need to support various devices have led to a deeper focus on Server-Side Ad Insertion (SSAI).  It is recommended that advertisers  provide  [Mezzanine files or Ready-to-serve media files of high, medium and low quality defined in DVAFG]
+
                                     </p>
 					                
-						            <div class="social-container">
-									    <div class="github-btn mb-2">
-					                        <a class="github-button" href="https://github.com/InteractiveAdvertisingBureau/OpenDirect" data-size="large" aria-label="Follow Interactive Advertising Bureau on GitHub">OpenDirect</a>
-						                </div>
+						            
                                 </div><!--//section-block-->
 								
-                                <div id="faq"  class="section-block">
-                                    <h3 class="block-title">FAQ</h3>
-                                    <p>An FAQ was created to help answer some of the common questions concerning OpenDirct. </p>
-									<div>
-									<a class="btn btn-red" href="https://iabtechlab.com/~iabtec5/wp-content/uploads/2016/04/OpenDirect_FAQ_IABTechLab.pdf"><i class="fas fa-cloud-download-alt"></i>Download FAQ</a> (PDF)
-								</div>
-                                    </p>
-                                    
-                                </div><!--//section-block-->
+                                
 								
-                                <div id="docs"  class="section-block">
-                                    <h3 class="block-title">Related Documents</h3>
-                                    <p>The following press releases and blog posts provide more information on OpenDirect.</p>
-									<ol>
-										<li>Press release: <a href="https://iabtechlab.com/press-releases/iab-tech-lab-releases-opendirect-2-0-for-public-comment-to-improve-the-buying-selling-of-premium-automated-guaranteed-inventory/">OpenDirect 2.0 released for public comment</a></li>
-										<li>Blog Post: <a href="https://iabtechlab.com/the-iab-tech-lab-releases-updates-to-three-programmatic-protocols/">IAB Tech Lab Releases Updates to Three Programmatic Protocols.</a></li>
-										<li>Press release: <a href="https://iabtechlab.com/opendirect-1-5-released-for-public-comment/">OpenDirect 1.5 released for public comment</a></li>
-										<li>Press release: <a href="https://www.iab.com/news/iab-releases-opendirect-1-0-for-public-comment-of-specification-that-provides-publishers-greater-control-in-packaging-buying-and-selling-premium-inventory-through-programmatic/">OpenDirect 1.0 released for public comment</a></li>
-                                    </p>
-                                </div><!--//section-block-->
+                                
                                 <div id="support"  class="section-block">
                                     <h3 class="block-title">Support</h3>
-                                    <p>If you have questions about OpenDirect, send an email to support to create a ticket.</p>
+                                    <p>If you have questions about CTV, SSAI, or any of the standards that support these technologies, send an email to support to create a ticket.</p>
 					                <div>
 					                    <a class="btn btn-blue" href="mailto:support@iabtechlab.com" target="_blank">Submit a Ticket</a></p>
 										<h6>IAB Tech Lab Contact</h6>
-										Amit Shetty, Senior Director, Programmatic</p>
+										Katie Stroud, Senior Product Manager</p>
 					                </div>
 									
                                     </p>
@@ -200,18 +175,36 @@ The updates made in OpenDirect 2.0 and the challenges they address are:</p>
                         <div id="doc-nav" class="doc-nav">
 	                        
 	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
-	                                <a class="nav-link scrollto" href="#about">About OpenDirect</a>
+	                                <a class="nav-link scrollto" href="#about">Introduction</a>
 									<nav class="doc-sub-menu nav flex-column">
-										<a class="nav-link scrollto" href="#updates">Updates in 2.0</a>
-										<a class="nav-link scrollto" href="#previous-versions">Previous Versions</a>
+										<a class="nav-link scrollto" href="#audience">Audience</a>
+										<a class="nav-link scrollto" href="#background">Background</a>
+										<a class="nav-link scrollto" href="#preface-ssai">Preface on SSAI</a>
 									</nav>
-	                                <a class="nav-link scrollto" href="#resources">Supporting Resources</a>
+	                                <a class="nav-link scrollto" href="#use-cases">Summary of Use Cases</a>
                                     <nav class="doc-sub-menu nav flex-column">
-                                        <a class="nav-link scrollto" href="#github">GitHub</a>
-										<a class="nav-link scrollto" href="#faq">FAQ</a>
-                                        <a class="nav-link scrollto" href="#docs">Related Documents</a>
-                                        <a class="nav-link scrollto" href="#support">Support</a>
-                                    </nav><!--//nav-->
+                                        <a class="nav-link scrollto" href="#uc-assets-delivery">Video Assets Delivery</a>
+										<a class="nav-link scrollto" href="#uc-ssai-delivery">SSAI: Delivery</a>
+                                        <a class="nav-link scrollto" href="#uc-targeting">Targeting</a>
+                                        <a class="nav-link scrollto" href="#uc-measurement">Measurement</a>
+										<a class="nav-link scrollto" href="#uc-interactivity">Interactivity</a>
+										<a class="nav-link scrollto" href="#uc-brand-safety">Brand Safety</a>
+										<a class="nav-link scrollto" href="#uc-ad-fraud">Ad Fraud</a>
+                                    </nav>
+	                                <a class="nav-link scrollto" href="#guidance">Guidance Details</a>
+                                   
+	                                <a class="nav-link scrollto" href="#ad-delivery">Ad Delivery</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#ad-vast">VAST Compliance</a>
+										<a class="nav-link scrollto" href="#ad-mezz">Mezzanine</a>
+                                        <a class="nav-link scrollto" href="#ad-afg">Ad Format Guidelines</a>
+                                        <a class="nav-link scrollto" href="#ad-macros">Macros</a>
+										<a class="nav-link scrollto" href="#ad-ssai-macros">SSAI: VAST Macros</a>
+										<a class="nav-link scrollto" href="#ad-bid-request">Bid Request</a>
+										<a class="nav-link scrollto" href="#ad-cats">CATS</a>
+										<a class="nav-link scrollto" href="#ad-creative-id">Creative Asset ID</a>
+                                    </nav>
+									<!--//nav-->
 	                            </nav><!--//doc-menu-->
 	                        
                         </div>

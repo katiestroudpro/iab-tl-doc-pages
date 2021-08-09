@@ -1439,6 +1439,18 @@ select {
   color: #ee3123;
 }
 
+.cards-section .item-grey .item-inner {
+  border-top: 3px solid #c3c3c3;
+}
+
+.cards-section .item-grey .item-inner:hover .title {
+  color: #c3c3c3;
+}
+
+.cards-section .item-grey .icon {
+  color: #c3c3c3;
+}
+
 .cards-section .item-pink .item-inner {
   border-top: 3px solid #EA5395;
 }

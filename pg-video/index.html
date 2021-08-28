@@ -356,25 +356,288 @@ Ad developers should refer to the Digital Video Ad Format Guidelines for encodin
 <h6>The Mezzanine File</h6>
 The mezzanine file is a raw source file that publishers can use to encode the ad at the
 required quality level for the content stream. This original file is too big to serve but
-contains the quality necessary to encode the appropriate version for a viewer’s environment. The mezzanine file is vital to ad-stitching services commonly used with online television networks. Ad-serving vendors (3rd party) can also use the mezzanine file to transcode all the necessary files to meet varying publisher requirements.
+contains the quality necessary to encode the appropriate version for a viewer’s environment. The mezzanine file is vital to ad-stitching services commonly used with online television networks. Ad-serving vendors (3rd party) can also use the mezzanine file to transcode all the necessary files to meet varying publisher requirements.</p>
 
 Video and audio specifications for the mezzanine file are defined in the following two tables.
 </p>
+                                   <div style="color:red; padding-top:20px; padding-bottom:10px"><h4>Video Specification for Mezzanine File</h4></div>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Video Setting</th>
+                                                    <th>Specification</th>
+                                                    <th>Notes</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Bit Rate</th>
+                                                    <td>50Mbps VBR or 15-30 CBR</td>
+                                                    <td>50 Mb for original source (preferred)</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Aspect Ratio</th>
+                                                    <td>16:9 (HD) or 4:3 (SD)</td>
+                                                    <td>16:9 is preferred</p>"letter-boxing" (black bars) should be avoided</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Resolution (1x1 pixels)</th>
+                                                    <td>For aspect ratio 16:9
+														<ul>
+															<li>HD = 1920x1080 or 1280x720</li>
+														</ul>
+														For aspect ratio 4:3
+														<ul>
+															<li>HD = 1440x1080</li>
+														</ul>
+														</td>
+                                                    <td>No burned in pillar boxing or letterboxing</p>Future support for 4k</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Color Space</th>
+                                                    <td>4:2:0 or 4:2:2 YUV</td>
+                                                    <td></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Frame Rate</th>
+                                                    <td>Depending on region, use one of the following frame rates:
+													<ul>
+														<li>PAL (25 fps)</li>
+														<li>24p (23.98 fps)</li>
+														<li>NTSC Video (29.97 fps)</li>
+													</ul>
+													</td>
+                                                    <td>Native frame rate preferred</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Codec</th>
+                                                    <td>
+                                                    	<ul>
+															<li>MPEG2, H.264/AAC</li>
+															<li>H.264 or Apply ProRes</li>
+															<li>H.265/HEVC</li>
+														</ul>
+                                                    </td>
+                                                    <td>Apple ProRes preferred but may exceed file size threshold for some vendors</p>HEVC may not yet be widely accepted</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Format</th>
+                                                    <td>
+                                                    	<ul>
+															<li>.mov</li>
+															<li>.mp4</li>
+														</ul>
+                                                    </td>
+                                                    <td></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Scan Type</th>
+                                                    <td>Progressive</td>
+                                                    <td>No intra-field motion (blended frames)</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Leaders (slate)</th>
+                                                    <td>Video creative should be submitted without leaders (slate) before content</td>
+                                                    <td></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Configuration</th>
+                                                    <td>
+                                                    	<ul>
+															<li>Picture to Picture</li>
+															<li>No slate</li>
+															<li>No countdown leader</li>
+															<li>No bars</li>
+															<li>No tone</li>
+														</ul>
+                                                    </td>
+                                                    <td></td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+										<p></p>
+										
+                                   <div style="color:red; padding-top:20px; padding-bottom:10px"><h4>Audio Specification for Mezzanine File</h4></div>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Audio Setting</th>
+                                                    <th>Specification</th>
+                                                    <th>Notes</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Audio Format</th>
+                                                    <td>AAC</td>
+                                                    <td>PCM is allowed for the mezzanine file but should not be used in any transcoded files used to serve the ad.</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Audio Bitrate</th>
+                                                    <td>192 kbps (AAC)</td>
+                                                    <td></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Audio Channel</th>
+                                                    <td>2 channel sterio mix L&R</td>
+                                                    <td>5.1 Do;by audio configuration may be added (see <a href="https://www.entmerch.org/digitalema/committeescouncils/ema-mezzanine-file-specific.pdf">EMA Mezzanine File Creation and Specification</a>)</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Audio Sample Rate</th>
+                                                    <td>48kHz</td>
+                                                    <td></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Audio Levels</th>
+                                                    <td>DB - 12 (average)</td>
+                                                    <td></td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+										<p></p>
+										
                                 </div><!--//section-block-->
 								
                                 <div id="ad-afg"  class="section-block">
                                     <h3 class="block-title">Ad Format Guidelines</h3>
-                                    <p>text</p>
+                                    <p>The Digital Video Ad Format Guidelines accommodate high-quality video needs for cross-screen linear advertising in mobile, desktop, and TV online. File submission recommendations detail “ready-to-serve” files for streaming, progressive download, and adaptive bitrate streaming formats. Providing the source mezzanine file is also recommended so that the publisher may transcode the file best suited to the environment into which it will serve.</p>
+
+Following these guidelines for video ad file submission will help streamline ad development
+and placement operations while providing the best experience possible in the user’s device for the bandwidth available. 
+</p>
                                 </div><!--//section-block-->
 								
                                 <div id="ad-macros"  class="section-block">
                                     <h3 class="block-title">Macros</h3>
-                                    <p>text</p>
+                                    <p>VAST player macros enable publisher’s media players to provide additional data points with ad requests, script requests, andtrackers. They allow for passing details such as the user agent and app where the VAST ad is serving.</p> 
+
+VAST player macros are to be filled by the party that performs VAST HTTP requests. Most commonly, for both VAST URLs and tracking pixel URLs, this would be the video player that’s executing the ad or the SSAI server on behalf of the video player. </p>
+
+Information that may be available via HTTP headers is not always consistent, and often publishers do not have control over what values are forwarded. Hence providing macros such as [DEVICEUA], [PAGEURL], and [SERVERUA] are recommended. These macros are also increasingly important as the industry moves away from VPAID and HTTP headers. For a complete list of available macros, please refer to the IAB VAST macro list page. 
+</p>
+
+                                <div class="section-block">
+                                    <div class="callout-block callout-info">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-info-circle"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">SSAI VAST Macro Guidance</h4>
+                                            <p>While the IAB Tech Lab has an official list of 50+ macros, it’s technically not possible to support all macros in any given HTTP request simply due to length limitations. Refer to the <a href="https://iabtechlab.com/audio-video/ssai-vast-macros-guidance/">SSAI VAST Macro Guidance: Version 1.0</a> for the full list of recommended macros to use for sharing basic user agent, environment, and content details that are critical to verification partners and buyers.</p>
+                                        </div><!--//content-->
+                                    </div><!--//callout-block-->
+									
+									<h6>Device & Environment Macros</h6>
+									<p>Critical for identifying the environment into which the ad will serve. Measurement partners most commonly use these macros for verification against fraud and buyer’s brand safety rules. </p>
+
+<ul>
+	<li>[APPBUNDLE]</li>
+	<li>[STOREID]</li>
+	<li>[STOREURL]</li>
+	<li>[DOMAIN]</li>
+	<li>[ADTYPE]</li>
+	<li>[PAGEURL]</li>
+	<li>[DEVICEIP]</li>
+	<li>[DEVICEUA]</li>
+</ul>
+
+<h6>Content Passing Macros</h6> 
+	<p>Used to help verification partners categorize and evaluate the content against a buyer’s brand safety rules. </p>
+
+<ul>
+	<li>[CONTENTURI]</li>
+	<li>[CONTENTID]</li>
+</ul>
+
+<h6>SSAI and Media Player Macros</h6> 
+<p>Used to help identify the type of player technology that publisher uses.</p>
+
+<ul>
+	<li>[SERVERUA]</li>
+	<li>[SERVERSIDE]</li>
+	<li>[CLIENTUA]</li>
+	<li>[PLAYBACKMETHODS]</li>
+	<li>[PLAYERSTATE]</li>
+</ul>
+
+									
                                 </div><!--//section-block-->
 								
                                 <div id="ad-bid-request"  class="section-block">
                                     <h3 class="block-title">Bid Request</h3>
-                                    <p>text</p>
+                                    <p>RTB transactions are initiated when an exchange or other supply source sends a bid request to a bidder. The bid request consists of the top-level bid request object, at least one impression object, and may include additional optional objects providing impression context.</p>
+
+The top-level object (i.e., in JSON, the unnamed outer object) is denoted as <code>BidRequest</code> in the model. Of its direct subordinates, only <code>Imp</code> is technically required since it is fundamental to describing the impression being sold and it requires at least one of Banner (which may allow multiple formats), Video, Audio, and Native to define the type of impression (i.e., whichever one or more the publisher is willing to accept; although a bid will be for exactly one of those specified). An impression can optionally be subject to a private marketplace.</p>
+
+Other subordinates to the <code>BidRequest</code> provide various forms of information to assist bidders in making targeting and pricing decisions. This includes details about the user, the device they’re using, the location of either, regulatory constraints, and the content and media in which the impression will occur.
+</p>
+
+<h6>Object: Video</h6>
+The Video object represents an in-stream video impression. Many of the fields are non-essential for minimally viable transactions but are included to offer fine control when needed. Video in OpenRTB generally assumes compliance with the VAST standard. As such, the notion of companion ads is supported by optionally including an array of Banner objects (refer to the Banner object in Section 3.2.6 of the OpenRTB 2.x Spec) that define these companion ads.
+
+                                   <div style="color:red; padding-top:20px; padding-bottom:10px"><h4>OpenRTB Object for Video</h4></div>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Attribute</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">mimes</th>
+                                                    <td>string array; required</td>
+                                                    <td>Content MIME types supported (video/x-ms-wmv, video/mp4, etc.)</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">minduration</th>
+                                                    <td>integer; recommended</td>
+                                                    <td>Minimum video ad duration (in seconds)</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">maxduration</th>
+                                                    <td>integer; recommended</td>
+                                                    <td>Maximum video ad duration (in seconds)</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">protocols</th>
+                                                    <td>integer array; recommended</td>
+                                                    <td>Array of supported video protocols. Refer to list 5.8 in OpenRTB documentation. At least one supported protocol must be specified in either the <code>protocol</code> or <code>protocols</code> attribute.</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">protocol</th>
+                                                    <td>integer; DEPRECATED</td>
+                                                    <td>NOTE: Deprecated in favor of <code>protocols</code>.</p>Supported video protocol. Refer to list 5.8 in OpenRTB documentation. At least one supported protocol must be specified in either the <code>protocol</code> or <code>protocols</code> attribute.</td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+
                                 </div><!--//section-block-->
 								
                                 <div id="ad-cats"  class="section-block">

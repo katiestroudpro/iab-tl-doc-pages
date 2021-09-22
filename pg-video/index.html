@@ -64,59 +64,75 @@
 				<div id="doc-header" class="doc-header text-left">
                     <h1 class="doc-title">Programmatic Guide</h1>
 					<h2 class="doc-subtitle">Connected TV with Highlights for SSAI</h2>
-					<div class="meta"><i class="far fa-clock"></i> Last updated: AUgust 15, 2021</div>
+					<div class="meta"><i class="far fa-clock"></i> Last updated: August 15, 2021</div>
 				</div>
                 <div>
-                    <a class="btn btn-red btn-cta" href="../assets/pdf/ProgrammaticGuide-CTV.pdf" target="_blank"><i class="fas fa-cloud-download-alt"></i> Download PDF</a>
+                    <a class="btn btn-red btn-cta" href="../assets/pdf/ProgrammaticGuide-CTV.pdf" target="_blank"><i class="fas fa-cloud-download-alt"></i> Download PDF</a> (only the cover page for now)
                 </div>
 			</div>
                 </div><!--//doc-header-->
                 <div class="doc-body row">
                     <div class="doc-content col-md-9 col-12 order-1">
                         <div class="content-inner">
-                            <section id="about" class="doc-section">
-                                <h2 class="section-title">Introduction</h2>
+                            
+							<section id="about" class="doc-section">
+                                <h2 class="section-title">About This Guide</h2>
                                 <div class="section-block">
-                                    <p>In recent years Digital Video has matured as a medium for advertising. Meanwhile an adolescent CTV market has begun to blossom, leading to new opportunities for expanding reach into homes across screens and devices. Traditionally these environments have been limited when it comes to providing a level of functionality and insight that have been the norm across web browsers and mobile apps. With advances in technology and improvements to standards, the industry has seen increasing parity in capabilities across environments, though not without some challenges in maintaining consistency when it comes to delivery, addressability, measurement, and fraud.</p>
+                                    <p>This guide is part of a series of Programmatic Guides that IAB Tech Lab is providing to address the many technical components involved in executing programmatic ad campaigns. This guide focuses on the use cases involved in a programmatic campaign for connected TV (CTV). And since CTV often works with partners in server-side ad insertion (SSAI), special callouts highlight additional information where working with SSAI is concerned.
 
-<p>The goal of this document is to provide a comprehensive guide in achieving the optimal implementation of digital video technical standards in CTV environments for the following channels:</p>
+<p>This guide is not all-inclusive; rather, it outlines a set of use cases and provides details that are relevant to each use case. Each use case is summarized in a Quick Start Overview and then later in the guide, covered in more detail. Links to additional resources and relevant Tech Lab standards for more details are included for each use case.</p>
+
+							</div><!--//section-block-->
+							 </section><!--//doc-section-->
+							
+							
+							<section id="intro" class="doc-section">
+                                <h2 class="section-title">Overview</h2>
+                                <div class="section-block">
+                                    <p>The goal of this document is to provide guidance for optimizing programmatic effectiveness in the supply chain for CTV campaigns using available resources developed by IAB Tech Lab and beyond. The guidance in this document addresses challenges faced in CTV with the following parties:</p>
 
 <ul>
-	<li>Publisher / Player</li>
-	<li>Ad Server</li>
-	<li>Adtech Vendors- DSP / SSP/ Exchanges</li>
-	<li>Measurement Verification Providers</li>
+	<li>Publisher or player app</li>
+	<li>Ad server</li>
+	<li>Server-side ad insertion (SSAI)</li>
+	<li>Programmatic Platforms (DSP, SSP, exchanges)</li>
+	<li>Measurement verification providers</li>
+	<li>Content providers</li>
+	<li>Other ad tech vendors offering services in CTV</li>
 </ul>
 
+<p>Digital video continues to mature as a medium for advertising, while the connected television (CTV) market has only begun to  leverage the programmatic ad technology initially developed for digital video. Programmatic CTV opens new opportunities for expanding reach into homes across screens and devices. Traditional television has lacked the level of functionality and insight that became the norm across web browsers and mobile apps. Now, with CTV and advances in technology and improvements to standards, the industry has seen increasing parity in capabilities between CTV and digital video. Some of the challenges in CTV, however, lie in delivery, addressability, measurement, and fraud.
 
-<p>Technical components are broken down into use cases (including a spotlight on Server Side Ad Stitching (SSAI) implementations) with a focus on the following six functional areas:</p>
+<p>This guide summarizes the best practices for using the most recent ad technologies for achieving the best results in CTV advertising. As a guide, it highlights key considerations and directs you to more in-depth information where needed. We’ve broken down the technical components of a CTV campaign into the following use cases:</p>
 
 <ul>
 	<li>Delivery</li>
 	<li>Targeting</li>
 	<li>Measurement & Verification</li>
 	<li>Interactivity</li>
-	<li>Ad Fraud</li>  
+	<li>Ad Fraud</li>
 	<li>Brand Safety</li>
 </ul>
 
-
+<p>These use cases are summarized at a high level in the following section, and then each use case is broken down into more details.</p>
 									
                                 </div>
-								<div id="updates" class="section-block">
+								<div id="audience" class="section-block">
 									<h3 class="block-title">Audience</h3>
-									<p>This guide is intended for individuals that work in the buying and development of video and CTV ad technology for publisher players, ad servers, ad creative developers, measurement & verification providers, as well as demand side platforms & exchanges, media buyers, ad trafficking and operations, partner integration/onboarding engineers and Product Development. The content is somewhat technical as it references different specifications and guidance documentation, but anyone who works with systems that handle video ad transactions should find the details useful.</p>
+									<p>This guide is intended for individuals that work in the buying, selling, and development of video advertising in CTV. Ad tech professionals who work with publisher players, ad servers, ad creative developers, measurement & verification providers, as well as demand side platforms & exchanges, media buyers, ad trafficking and operations, partner integration/onboarding engineers and Product Development can all benefit from the guidance offered in this documentation. The content is somewhat technical as it references different specifications and guidance documentation, but anyone who works with systems that handle video ad transactions should find the details useful.</p>
 
 								</div>
-								<div id="previous-versions" class="section-block">
+								<div id="background" class="section-block">
 									<h3 class="block-title">Background</h3>
-									<p>Initially launched in 2008, VAST has since played an important role in the growth of the digital video marketplace. The early days of video consisted mostly of shared videos and other user-generated content. Success in monetizing this content with ads has produced the resources to improve the digital video marketplace. However, digital video has met a number of challenges along the way.
+									<p>The first television was introduced in 1928. It took until the 1980s for cable set top boxes to become mainstream. And it wasn’t until recent years that smart TVs (connected TVs) became mainstream. However, before CTV, we had the Internet, and shortly thereafter, digital video.
 
-With the introduction of VAST 4.1 in 2018, new features were included to address some of these challenges, such as compatibility and latency issues that cause poor quality user experiences or difficulties in tracking creatives that are used across multiple platforms.  As players begin to adopt the updates in subsequent VAST 4.x versions, digital video advertising can expect smoother operation and continued growth.
+<p>With programmatic ad-serving technology, digital video saw exponential growth. Since the initial launch of IAB Tech Lab’s Video Ad Serving Template (VAST) in 2008, digital video could begin to scale ad sales in the same way website publishers could with their display ads. With improvements to VAST and the addition of other technologies, ad tech for digital video became more sophisticated, and digital video quality improved.
 
-If VAST 4.x is the heart of delivering a high-calibre digital video ad campaign, then Tech Lab’s portfolio of additional standards are the supporting vital organs necessary in providing privacy-centric addressability, anti-fraud transparency, measurement accuracy and rich interactive experiences.
-</p>
-</div>
+<p>With the explosion of devices that enabled consumers to watch their favorite videos anywhere, connected TVs became the next step in bringing that sophisticated ad tech to prime-time screens in people’s living rooms. But ad tech for CTV is still catching up. The good news is that much of the ad tech developed for digital video can also work in CTV.
+
+<p>As existing standards are updated to support CTV, and new standards are considered, this guide offers the best way to address the same challenges in CTV programmatic campaigns that first emerged as digital video matured. From the functional challenges of delivering assets to targeting and measurement to concerns over brand safety and ad fraud, the technical standards that have fueled the growth of digital video can also help CTV to scale and grow.</p>
+
+							</div>
 
 								<div id="preface-ssai" class="section-block">
 									<h3 class="block-title">Preface on SSAI</h3>
@@ -668,13 +684,14 @@ The Video object represents an in-stream video impression. Many of the fields ar
                         <div id="doc-nav" class="doc-nav">
 	                        
 	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
-	                                <a class="nav-link scrollto" href="#about">Introduction</a>
+	                                <a class="nav-link scrollto" href="#about">About This Guide</a>
+									<a class="nav-link scrollto" href="#intro">Overview</a>
 									<nav class="doc-sub-menu nav flex-column">
 										<a class="nav-link scrollto" href="#audience">Audience</a>
 										<a class="nav-link scrollto" href="#background">Background</a>
 										<a class="nav-link scrollto" href="#preface-ssai">Preface on SSAI</a>
 									</nav>
-	                                <a class="nav-link scrollto" href="#use-cases">Summary of Use Cases</a>
+	                                <a class="nav-link scrollto" href="#use-cases">Quick Start Reference</a>
                                     <nav class="doc-sub-menu nav flex-column">
                                         <a class="nav-link scrollto" href="#uc-assets-delivery">Video Assets Delivery</a>
                                         <a class="nav-link scrollto" href="#uc-targeting">Targeting</a>

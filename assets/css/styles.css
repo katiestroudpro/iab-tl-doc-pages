@@ -64,7 +64,7 @@ code {
   font-weight: bold;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   padding: 0px 8px;
-  
+  padding-top: 4px;
   display: inline-block;
 }
 

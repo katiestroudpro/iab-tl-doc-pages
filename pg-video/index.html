@@ -173,10 +173,12 @@ Those interested in the critical details of applying the technical standards cit
 
                                 <div id="uc-assets-delivery"  class="section-block">
                                     <h3 class="block-title">Video Assets Delivery</h3>
-                                    <p><strong>Quality: </strong>As advertisers look to extend their digital video campaigns to include CTV, one of the primary considerations is the screen size on which ads are viewed. Larger screens mean that higher asset quality and overall consumer experience are even more important. In addition, CTV ad delivery and the need to support various devices have led to a deeper focus on Server-Side Ad Insertion (SSAI).  It is recommended that advertisers  provide mezzanine files or ready-to-serve media files of high, medium and low quality defined in DVAFG]</p>
+	                                
+                                    <p><strong>Quality: </strong>As advertisers look to extend their digital video campaigns to include CTV, one of the primary considerations is the screen size on which ads are viewed. Larger screens mean that higher asset quality and overall consumer experience are even more important. In addition, CTV ad delivery and the need to support various devices have led to a deeper focus on Server-Side Ad Insertion (SSAI). For asset submission in CTV, and especially when working with SSAI, a mezzanine file is required. A mezzanine file is encoded at the highest possible quality and used to encode ready-to-serve ads at lower resolutions and smaller file size. Guidelines for creative file submission are outlined the Digital Video Ad Formats Guidelines.</p>
 									
 									<p><strong>Ad Request: </strong> VAST has historically been an ad response format, with the ad request left as an integration exercise. With VAST 4.1, a standard set of macros can be used to communicate information about the impression and player environment in the ad request. This enables ad servers to generate the best possible VAST response for any impression and reduce delivery errors. We recommend the use of [Macros and CATS] </p>
 									
+	                               
 									<p><strong>Campaign Tracking: </strong>Another challenge in video ad delivery has been the lack of the ability to uniquely identify a creative asset across different media or screens. This is useful for reporting, caching creative assets, and frequency capping. We recommend advertisers provide [Universal AdID] </p>
 									
 									<p><strong>Separation of Media from Executable Code: </strong>The complexity of digital video has given rise to the need to separate the linear video file from any executable code like creative interactive API files or measurement scripts. While the VAST media file nodes has accepted various media files in the past, interactive APIs may not always be executed. In VPAID, the code and the media file are bundled together, resulting in latency and making it impossible to serve an ad through SSAI. Hence, with VAST 4.x, the deprecation of VPAID was announced in favor of providing separate locations for interactive and measurement scripts that ensure the media file is always easily accessible from the VAST tag. We recommend advertisers and their partners provide media files and executable codes separately to be included in VAST verification and creative nodes [VPAID deprecation] </p>	
@@ -198,7 +200,30 @@ To enable error free execution of SSAI delivery, we recommend the following reso
 
                                         </div><!--//content-->
                                     </div><!--//callout-block-->
-                                </div><!--//section-block-->
+                                
+                                <div class="callout-block callout-links">
+                                    <!--//icon holder
+									<div class="icon-reference">
+                                        <i class="fas fa-book"></i>
+                                    </div> -->
+										<div class="content-ref">
+											<h4 class="callout-title-ref">IAB Tech Lab Resources for Video Asset Delivery</h4>
+                                
+									<ul class="list list-links">
+                                        <li><a href="https://iabtechlab.com/" target="_blank"><span style="color:#ee3123"><i class="fas fa-external-link-square-alt"></i><span class="ml-2">Digital Video Ad Format Guidelines</span></a></li>
+										
+										<li><a href="https://iabtechlab.com/standards/vast/" target="_blank"><span style="color:#ee3123"><i class="fas fa-external-link-square-alt"></i><span class="ml-2">Video Ad Serving Template (VAST)</span></a></li>
+										
+										<li><a href="https://interactiveadvertisingbureau.github.io/vast/vast4macros/vast4-macros-latest.html#macro-spec-clientua" target="_blank"><span style="color:#ee3123"><i class="fas fa-external-link-square-alt"></i><span class="ml-2">VAST Macros</span></a></li>
+										
+										<li><a href="https://iabtechlab.com/standards/cats/" target="_blank"><span style="color:#ee3123"><i class="fas fa-external-link-square-alt"></i><span class="ml-2">Common Ad Transport Standard (CATS)</span></a></li>
+									
+                                    </ul>
+							
+									</div><!--//content-->
+                            	</div><!--//callout-block-->
+								
+								</div><!--//section-block-->
 								
                                 <div id="uc-targeting"  class="section-block">
                                     <h3 class="block-title">Targeting</h3>
